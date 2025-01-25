@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to PDEU | Top University in Gujarat</title>
+    <link rel="icon" href="img/small_main.png" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        header {
+            background: #cd3535;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        nav {
+            background: #444;
+            color: white;
+            padding: 0.5rem 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+    position: relative; /* Make sure ::before is positioned correctly */
+    background: url('img/pdeu.jpeg') no-repeat center center/cover;
+    height: 400px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 200;
+}
+
+.hero::before {
+    content: ''; /* Required for pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Light overlay */
+    z-index: 1; /* Ensure it sits below text */
+}
+
+.hero h2,
+.hero p,
+.hero a {
+    position: relative; /* Place text above the overlay */
+    z-index: 2;
+}
+
+ 
+        .hero h2 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+        .hero a {
+            background: yellow;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .section {
+            padding: 2rem;
+            text-align: center;
+        }
+        .section h2 {
+            margin-bottom: 1rem;
+        }
+        .section p {
+            max-width: 800px;
+            margin: 0 auto 1rem;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            text-align: center;  
+            background-color: #f9f9f9;  
+            margin: 0;  
+            padding: 20px;  
+        }  
+        h1 {  
+            margin-bottom: 30px;  
+        }  
+        .schools {  
+            display: flex;  
+            justify-content: center;  
+            gap: 20px;  
+            margin-bottom: 20px;  
+        }  
+        .school {  
+            padding: 20px;  
+            color: white;  
+            border-radius: 8px;  
+            width: 200px;  
+        }  
+        .som { background-color: #FF6F20; } /* School of Management */  
+        .sls { background-color: #D5006D; } /* School of Liberal Studies */  
+        .soet { background-color: #0073e6; } /* School of Energy Technology */  
+        .sot { background-color: #009688; } /* School of Technology */  
+        .more-btn {  
+            background-color: #A50000;  
+            color: white;  
+            padding: 10px 20px;  
+            border: none;  
+            border-radius: 5px;  
+            cursor: pointer;  
+            font-size: 16px;  
+        }  
+    </style>  
+</head>
+<body>
+    <header>
+        <h1>Pandit Deendayal Energy University (PDEU)</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#academics">Academics</a>
+        <a href="#research">Research</a>
+        <a href="#placements">Placements</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero">
+        <h2>12th Convocation</h2>
+        <p>PDEU is delighted to announce its 12th convocation on 28th January, 2025.</p>
+        <a href="https://pdeu.ac.in/convocation">Learn More</a>
+    </div>
+
+    <h1>Constituent Schools</h1>  
+
+    <div class="schools">  
+        <div class="school som">  
+            <h2>SoM</h2>  
+            <p>SCHOOL OF MANAGEMENT</p>  
+        </div>  
+        <div class="school sls">  
+            <h2>SLS</h2>  
+            <p>SCHOOL OF LIBERAL STUDIES</p>  
+        </div>  
+        <div class="school soet">  
+            <h2>SoET</h2>  
+            <p>SCHOOL OF ENERGY TECHNOLOGY</p>  
+        </div>  
+        <div class="school sot">  
+            <h2>SoT</h2>  
+            <p>SCHOOL OF TECHNOLOGY</p>  
+        </div>  
+    </div>  
+
+    <p>Study at the most vibrant and diverse campus in Gujarat with opportunity for experience based learning. The overall University’s physical infrastructure is designed to focus on the power of ‘interdisciplinary research’.</p>  
+
+    <button class="more-btn">More About Academics</button> 
+    
+    <hr>
+    <h1 style="text-align: center;">Research & Development</h1>  
+
+    <p style="text-align: center;">  
+        The Office of Dean - Research and Development provides, to the entire PDEU fraternity, support from the initial stages of proposal development to grants management, publication, and the transfer of technology in terms of patent and prototype.  
+    </p>  
+
+    <h2 style="text-align: center; color: #A52A2A;">Projects and Patents</h2>  
+
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-top: 20px;">  
+        <div style="border: 1px solid #ccc; border-radius: 8px; padding: 20px; width: 200px; text-align: center;">  
+            <div>⚙️</div>  
+            <h3>60+</h3>  
+            <p>Ongoing Projects</p>  
+        </div>  
+        <div style="border: 1px solid #ccc; border-radius: 8px; padding: 20px; width: 200px; text-align: center;">  
+            <div>📄</div>  
+            <h3>250+</h3>  
+            <p>Patents</p>  
+        </div>  
+        <div style="border: 1px solid #ccc; border-radius: 8px; padding: 20px; width: 200px; text-align: center;">  
+            <div>📊</div>  
+            <h3>220+</h3>  
+            <p>Student Research Projects</p>  
+        </div>  
+        <div style="border: 1px solid #ccc; border-radius: 8px; padding: 20px; width: 200px; text-align: center;">  
+            <div>🏢</div>  
+            <h3>250+</h3>  
+            <p>Cr. Invested in<br> Centers of Excellence</p>  
+        </div>  
+    </div>  
+    <br>
+
+    <button class="more-btn">More About Research</button> 
+    <hr>
+    <h1>Placements</h1>  
+    
+    <p>PDEU has an excellent track record of securing placement for its students. Students have been recruited by top companies of India and many companies have been visiting PDEU every year for recruiting students. Students have received job offers from companies which are predominantly from their respective discipline.</p>  
+
+    <div>  
+        <span>Adani | </span>  
+        <span>Amazon | </span>  
+        <span>Reliance Industries Limited | </span>  
+        <span>McKinsey & Company | </span>  
+        <span>Google | </span>  
+        <span>Micron | </span>  
+        <span>Cisco | </span>  
+        <span>ONGC | </span>  
+    </div>  
+    <br>
+
+    <button class="more-btn">More About Placement</button> 
+    
+    <hr>
+
+    <footer id="contact">
+        <p>Contact Us | Pandit Deendayal Energy University | Gandhinagar, Gujarat</p>
+        <p>Email: info@pdeu.ac.in | Phone: +91-79-23275060</p>
+    </footer>
+</body>
+</html>
