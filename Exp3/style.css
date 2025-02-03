@@ -1,0 +1,410 @@
+body {
+    background-color: #262626;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.content {
+    width: 50%;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.start-btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.start-btn:hover {
+    background-color: darkred;
+}
+
+.video {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.lescontainer {
+    display: flex;
+    align-items: center;
+    padding: 10px 50px;
+    width: 88%;
+}
+
+.complete-series-btn {
+    background-color: black;
+    color: white;
+    padding: 8px 15px;
+    font-size: 1rem;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    align-self: flex-end; /* Aligns button to the bottom of the container */
+}
+
+.complete-series-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.lessons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 50px;
+    width: 90%;
+}
+
+.lesson {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    transition: 0.3s;
+    position: relative;
+}
+
+.lesson:hover {
+    background-color: #333;
+}
+
+.lesson img {
+    width: 300px;
+    height: 170px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.lesson-content {
+    flex: 1;
+    color: white;
+}
+
+.lesson-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.lesson-content p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+.lesson a{
+    text-decoration: none;
+}
+
+.lesson-duration {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    color: white;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    color: white;
+    transition: 0.3s;
+}
+
+.comment-icon {
+    position: relative;
+}
+
+.comment-count {
+    font-size: 1rem;
+    margin-left: 5px;
+    color: white;
+}
+
+.next-series-container {
+    color: white;
+    padding: 10px 30px;
+    width: 88%;
+}
+
+.next-series-container h2 {
+    font-size: 1.8rem;
+}
+
+.next-series-container p {
+    font-size: 1.1rem;
+}
+
+.next-series-card {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #171717;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.next-series-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+}
+
+.next-series-content {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.next-series-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.next-series-content p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.next-series-content a {
+    text-decoration: none;
+    color: white;
+}
+
+.series-details {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.series-details .author {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.series-details .author img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.series-details i {
+    margin-right: 5px;
+    color: white;
+}
+
+.start-series-btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.start-series-btn:hover {
+    background-color: darkred;
+}
+
+
+.footer {
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    align-items: center;
+} 
+
+.footer-container {  
+    display: flex; 
+    align-content: center;
+    justify-content:space-between; /* Change this from space-between to center */  
+    flex-wrap: wrap;  
+    max-width: 90%;  
+    margin-left: 10px;  
+}  
+
+.footer-column {  
+    text-align: center; /* Align text to the left */  
+}
+
+
+.footer-left {
+    max-width: 30%;
+}
+
+.logo {
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer-description {
+    font-size: 14px;
+    color: #bbb;
+    margin: 10px 0;
+}
+
+.social-icons a {
+    color: #bbb;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 60%;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    color: red;
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0 20px;
+}
+
+.footer-column ul li {
+    margin-bottom: 20px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #fff;
+}
+
+.footer-bottom p {
+    display: flex;
+    margin-top: 20px;
+    padding-top: 10px;
+    font-size: 15px;
+    color: #bbb;
+    
+    
+}
+
+.navbar {  
+    display: flex;  
+    align-items: center;  
+    justify-content: space-between;  
+    background-color: #111;  
+    padding: 10px 20px;  
+}  
+
+.logo {  
+    display: flex;  
+    align-items: center;  
+}  
+
+.logo img {  
+    height: 30px; /* Adjust as needed */  
+    margin-right: 10px;  
+}  
+
+.nav-links {  
+    display: flex;  
+    gap: 20px;  
+}  
+
+.nav-links a {  
+    color: white;  
+    text-decoration: none;  
+    padding: 5px 10px;  
+    transition: background-color 0.3s;  
+}  
+
+.nav-links a:hover {  
+    background-color: #555;  
+    border-radius: 5px;  
+}  
+
+.search-and-auth {  
+    display: flex;  
+    align-items: center;  
+}  
+
+.search-and-auth input {  
+    padding: 5px;  
+    margin-right: 10px;  
+}  
+
+.pricing, .login, .signup {  
+    color: white;  
+    text-decoration: none;  
+    padding: 5px 10px;  
+    border-radius: 5px;  
+}  
+
+.login {  
+    background-color: #444;  
+}  
+
+.signup {  
+    background-color: #007BFF;  
+    color: white;  
+}  
+
+.signup:hover {  
+    background-color: #0056b3;  
+}  
