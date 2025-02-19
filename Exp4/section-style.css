@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #bbe4e9;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 3px solid #5585b5;
+    padding-bottom: 5px;
+}
+
+p {
+    font-size: 16px;
+    color: #444;
+}
+
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #53a8b6;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #79c2d0;
+}
+
+.job {
+    background-color: white;
+    padding: 15px;
+    border-left: 5px solid #5585b5;
+    margin-bottom: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project, .activity {
+    background-color: white;
+    padding: 15px;
+    border-left: 5px solid #5585b5;
+    margin-bottom: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Status Box */
+.status-page .status-container {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    max-width: 100%;
+    text-align: left;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Heading Styling */
+.status-page h2 {
+    color: #222;
+    font-size: 26px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #5585b5;
+    display: inline-block;
+}
+
+/* Paragraph Styling */
+.status-page p {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* List Styling */
+.status-page ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.status-page ul li {
+    font-size: 16px;
+    background: #79c2d0;
+    color: #222;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+/* Hover Effect */
+.status-page ul li:hover {
+    background: #53a8b6;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Highlight Key Information */
+.status-page strong {
+    color: #5585b5;
+    font-weight: bold;
+}
+
+/* Summary Page Styling */
+.summary-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin: auto;
+}
+
+.summary-content {
+    background: #bbe4e9;
+    padding: 15px;
+    border-left: 5px solid #5585b5;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Hover Effect */
+.summary-content:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+    background: #79c2d0;
+}
+
+.project:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+    background: #79c2d0;
+}
+
+.job:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+    background: #79c2d0;
+}
+
+.activity:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+    background: #79c2d0;
+}

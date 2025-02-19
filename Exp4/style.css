@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* .header {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 50px;
+}
+
+.header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 30px;
+    border: 2px solid white;
+}
+
+.header .info {
+    flex-grow: 1;
+} */
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 50px;
+    animation: slide-in 1.5s ease-in-out;
+}
+
+.header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    transform: translateY(0px);
+    animation: float 3s ease-in-out infinite;
+}
+
+.header img:hover {
+    /* No zooming or rotation, just keeping it floating */
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    }
+    50% {
+        transform: translateY(-10px); /* Adjust floating height */
+        box-shadow: 0 15px 25px 0px rgba(0,0,0,0.3);
+    }
+    100% {
+        transform: translateY(0px);
+        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.info {
+    margin-left: 20px;
+    opacity: 0;
+    animation: fade-in 1.5s ease-in-out 0.5s forwards;
+}
+
+span a {
+    font-size: 18px;
+    color: #cccccc;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: all 0.4s ease-in-out;
+}
+span a:hover {
+    color: #ffffff;
+}
+
+
+
+.container {
+    display: flex;
+    height: 90vh;
+}
+
+
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #222;
+    padding: 15px;
+    box-shadow: 3px 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 0px; /* Rounded corners for a smoother look */
+}
+
+/* Sidebar List */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Sidebar List Item */
+.sidebar ul li {
+    margin: 15px 0;
+    position: relative;
+}
+
+/* Sidebar Link Style */
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 12px 15px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #444, #333); /* Subtle gradient background */
+    text-align: center;
+    font-size: 16px;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    font-weight: 600;
+}
+
+/* Hover Effects with Icon & Sliding Underline */
+.sidebar ul li a:hover {
+    background: #79c2d0; /* Bright yellow on hover */
+    color: #222;
+    transform: translateX(5px); /* Slight slide to the right */
+}
+
+.sidebar ul li a::before {
+    content: ''; /* This creates a pseudo-element for the underline effect */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #5585b5;
+    transition: width 0.3s ease; /* Animation for the underline */
+}
+
+.sidebar ul li a:hover::before {
+    width: 100%; /* Full width on hover */
+}
+
+/* Optionally, add some subtle icon effects (using font-awesome icons) */
+.sidebar ul li a i {
+    margin-right: 8px; /* Space between icon and text */
+    transition: transform 0.3s ease;
+}
+
+.sidebar ul li a:hover i {
+    transform: rotate(10deg); /* Rotate icons on hover */
+}
+
+/* Styling for the Content Area */
+.content {
+    flex-grow: 1;
+    background: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+/* Styling for iframe */
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
