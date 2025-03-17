@@ -1,0 +1,85 @@
+/* src/components/Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #f5f5f5;
+    color: #333;
+    height: 70px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 5px 0;
+  }
+  
+  .logo-image {
+    height: 85%; /* Use percentage of parent height */
+    width: auto; /* Maintain aspect ratio */
+    max-height: 60px; /* Maximum height to prevent overflow */
+    object-fit: contain; /* Ensures the entire image is visible */
+    vertical-align: middle;
+  }
+  
+  .navbar-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links li {
+    margin: 0 15px;
+  }
+  
+  .navbar-links a {
+    color: #556b2f;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+  }
+  
+  .navbar-links a:hover {
+    color: #8fbc8f;
+  }
+  
+  .navbar-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #8fbc8f;
+    transition: width 0.3s ease;
+  }
+  
+  .navbar-links a:hover::after {
+    width: 100%;
+  }
+  
+  .login-btn {
+    background-color: #8fbc8f;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-btn:hover {
+    background-color: #6b8e23;
+  }
+  
+  /* Media query for responsive behavior */
+  @media (max-width: 768px) {
+    .logo-image {
+      max-height: 50px; /* Slightly smaller on mobile */
+    }
+  }
