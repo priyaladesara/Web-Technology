@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+:root {
+    --primary: #6C63FF;
+    --primary-light: #8A84FF;
+    --text: #333;
+    --text-light: #666;
+    --background: #f9f9ff;
+    --card: #ffffff;
+    --success: #4CAF50;
+    --star-inactive: #e0e0e0;
+    --star-active: #FFD700;
+}
+
+body {
+    background-color: var(--background);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.form-card {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(108, 99, 255, 0.1);
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    background: transparent;
+    color: var(--text);
+    font-size: 1rem;
+    outline: none;
+}
+
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: var(--text-light);
+    font-size: 1rem;
+    pointer-events: none;
+    transition: 0.3s ease all;
+}
+
+.input-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #e0e0e0;
+}
+
+.input-line::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--primary);
+    transition: 0.3s ease width;
+}
+
+.input-group input:focus ~ .input-line::after,
+.input-group textarea:focus ~ .input-line::after,
+.input-group input:not(:placeholder-shown) ~ .input-line::after,
+.input-group textarea:not(:placeholder-shown) ~ .input-line::after {
+    width: 100%;
+}
+
+.input-group input:focus ~ label,
+.input-group textarea:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group textarea:not(:placeholder-shown) ~ label {
+    top: -12px;
+    font-size: 0.8rem;
+    color: var(--primary);
+}
+
+.textarea textarea {
+    min-height: 100px;
+    resize: none;
+}
+
+.rating-container {
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.rating-label {
+    color: var(--text);
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 0.8rem;
+}
+
+.stars i {
+    font-size: 28px;
+    color: var(--star-inactive);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.stars i:hover {
+    transform: translateY(-5px);
+}
+
+.stars i.active {
+    color: var(--star-active);
+}
+
+.rating-text {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    height: 20px;
+}
+
+button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    box-shadow: 0 4px 15px rgba(108, 99, 255, 0.2);
+}
+
+button:hover {
+    background-color: var(--primary-light);
+    box-shadow: 0 6px 20px rgba(108, 99, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.confirmation {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(108, 99, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.check-icon {
+    font-size: 5rem;
+    color: var(--success);
+    margin-bottom: 1.5rem;
+    animation: scale-in 0.5s cubic-bezier(.22,.68,0,1.71);
+}
+
+.confirmation h2 {
+    color: var(--text);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.confirmation p {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+#submittedRating {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+#resetBtn {
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    box-shadow: none;
+}
+
+#resetBtn:hover {
+    background-color: rgba(108, 99, 255, 0.05);
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.4); }
+    100% { transform: scale(1.2); }
+}
+
+@keyframes scale-in {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.shake {
+    animation: shake 0.6s ease-in-out;
+}
+
+.stars i.clicked {
+    animation: pulse 0.3s cubic-bezier(.25,.8,.25,1.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .form-card {
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .stars i {
+        font-size: 24px;
+    }
+}
