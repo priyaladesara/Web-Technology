@@ -1,5 +1,6 @@
 // src/components/Sidebar.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Sidebar.css';
 
 function Sidebar() {
@@ -7,11 +8,11 @@ function Sidebar() {
     <div className="sidebar">
       <h3>Dashboard</h3>
       <ul className="sidebar-menu">
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Analytics</a></li>
-        <li><a href="#">Reports</a></li>
-        <li><a href="#">Settings</a></li>
-        <li><a href="#">Profile</a></li>
+        <li><Link to="/">Dashboard</Link></li>
+        <li><Link to="/analytics">Analytics</Link></li>
+        <li><Link to="/reports">Reports</Link></li>
+        <li><Link to="/settings">Settings</Link></li>
+        <li><Link to="/profile">Profile</Link></li>
       </ul>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
@@ -7,14 +8,16 @@ import './App.css';
 
 function App() {
   return (
-    <div className="app">
-      <Navbar />
-      <div className="content-wrapper">
-        <Sidebar />
-        <MainContent />
+    <BrowserRouter>
+      <div className="app">
+        <Navbar />
+        <div className="content-wrapper">
+          <Sidebar />
+          <MainContent />
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
 

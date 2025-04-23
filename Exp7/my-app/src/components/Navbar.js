@@ -14,11 +14,13 @@ function Navbar() {
         <li><a href="#">Schedule</a></li>
         <li><a href="#">About</a></li>
       </ul>
-      <div className="navbar-auth">
-        <button className="login-btn">Login</button>
-      </div>
     </nav>
+   
   );
 }
 
-export default Navbar;
+
+// rfce to automate  react xport component
+// rcc to react class export comonent 
+
+export default Navbar;  //export function name 
